@@ -19,13 +19,13 @@ public class RecyclerOriginDelegate implements RecyclerAdapterDelegate {
 
     @Override
     public int getStartPosition() {
-        RecyclerAdapterDelegate<?> headerDelegate = mRecyclerViewFragment.getHeaderDelegate();
+        RecyclerAdapterDelegate headerDelegate = mRecyclerViewFragment.getHeaderDelegate();
         return headerDelegate == null ? 0 : headerDelegate.getEndPosition();
     }
 
     @Override
     public int getEndPosition() {
-        RecyclerAdapterDelegate<?> footerDelegate = mRecyclerViewFragment.getFooterDelegate();
+        RecyclerAdapterDelegate footerDelegate = mRecyclerViewFragment.getFooterDelegate();
         return footerDelegate == null ? mRecyclerViewFragment.getRecyclerAdpater().getItemCount() : footerDelegate.getStartPosition();
     }
 

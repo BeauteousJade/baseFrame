@@ -15,7 +15,6 @@ import com.jade.baseframe.helper.delegate.ActivityResultDelegate;
 import com.jade.baseframe.helper.delegate.BackPressDelegate;
 import com.jade.baseframe.fragment.BaseFragment;
 
-
 public abstract class BaseActivity extends AppCompatActivity {
 
     private BaseFragment mCurrentFragment;

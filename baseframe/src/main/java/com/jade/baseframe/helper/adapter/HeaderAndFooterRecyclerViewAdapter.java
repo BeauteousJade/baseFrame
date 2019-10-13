@@ -9,11 +9,11 @@ import java.util.List;
 
 public final class HeaderAndFooterRecyclerViewAdapter extends BaseRecyclerAdapter<Object> {
 
-    private RecyclerAdapterDelegate<?> mHeaderDelegate;
-    private RecyclerAdapterDelegate<?> mOriginDelegate;
-    private RecyclerAdapterDelegate<?> mFooterDelegate;
+    private RecyclerAdapterDelegate mHeaderDelegate;
+    private RecyclerAdapterDelegate mOriginDelegate;
+    private RecyclerAdapterDelegate mFooterDelegate;
 
-    public HeaderAndFooterRecyclerViewAdapter(@NonNull RecyclerAdapterDelegate<?> originDelegate) {
+    public HeaderAndFooterRecyclerViewAdapter(@NonNull RecyclerAdapterDelegate originDelegate) {
         mOriginDelegate = originDelegate;
     }
 
@@ -41,8 +41,8 @@ public final class HeaderAndFooterRecyclerViewAdapter extends BaseRecyclerAdapte
     }
 
     @NonNull
-    private RecyclerAdapterDelegate<?> getValidDelegateByViewType(int viewType) {
-        RecyclerAdapterDelegate<?> delegate = mOriginDelegate;
+    private RecyclerAdapterDelegate getValidDelegateByViewType(int viewType) {
+        RecyclerAdapterDelegate delegate = mOriginDelegate;
         if (mHeaderDelegate != null && mHeaderDelegate.checkRangeByViewType(viewType)) {
             delegate = mHeaderDelegate;
         } else if (mFooterDelegate != null && mFooterDelegate.checkRangeByViewType(viewType)) {
@@ -51,8 +51,8 @@ public final class HeaderAndFooterRecyclerViewAdapter extends BaseRecyclerAdapte
         return delegate;
     }
 
-    private RecyclerAdapterDelegate<?> getValidDelegateByPosition(int position) {
-        RecyclerAdapterDelegate<?> delegate = mOriginDelegate;
+    private RecyclerAdapterDelegate getValidDelegateByPosition(int position) {
+        RecyclerAdapterDelegate delegate = mOriginDelegate;
         if (mHeaderDelegate != null && mHeaderDelegate.checkRangeByPosition(position)) {
             delegate = mHeaderDelegate;
         } else if (mFooterDelegate != null && mFooterDelegate.checkRangeByPosition(position)) {
@@ -61,23 +61,23 @@ public final class HeaderAndFooterRecyclerViewAdapter extends BaseRecyclerAdapte
         return delegate;
     }
 
-    public void setHeaderDelegate(RecyclerAdapterDelegate<?> headDelegate) {
+    public void setHeaderDelegate(RecyclerAdapterDelegate headDelegate) {
         mHeaderDelegate = headDelegate;
     }
 
-    public void setFooterDelegate(RecyclerAdapterDelegate<?> footerDelegate) {
+    public void setFooterDelegate(RecyclerAdapterDelegate footerDelegate) {
         mFooterDelegate = footerDelegate;
     }
 
-    public RecyclerAdapterDelegate<?> getHeaderDelegate() {
+    public RecyclerAdapterDelegate getHeaderDelegate() {
         return mHeaderDelegate;
     }
 
-    public RecyclerAdapterDelegate<?> getFooterDelegate() {
+    public RecyclerAdapterDelegate getFooterDelegate() {
         return mFooterDelegate;
     }
 
-    public RecyclerAdapterDelegate<?> getOriginDelegate() {
+    public RecyclerAdapterDelegate getOriginDelegate() {
         return mOriginDelegate;
     }
 }

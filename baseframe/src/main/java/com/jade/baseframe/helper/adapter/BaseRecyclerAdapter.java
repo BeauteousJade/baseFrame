@@ -22,7 +22,7 @@ import java.util.Map;
 
 public abstract class BaseRecyclerAdapter<U> extends RecyclerView.Adapter<BaseViewHolder> {
 
-    private final List<Object> mEmptyPlayloads = new ArrayList<>();
+    private final List<Object> mEmptyPayloads = new ArrayList<>();
     private List<U> mDataList;
     private BaseFragment mFragment;
     private Map<String, Object> mExtraMap = new HashMap<>();
@@ -132,7 +132,7 @@ public abstract class BaseRecyclerAdapter<U> extends RecyclerView.Adapter<BaseVi
 
     @Override
     public final void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
-        onBindViewHolder(holder, position, mEmptyPlayloads);
+        onBindViewHolder(holder, position, mEmptyPayloads);
     }
 
     @Override

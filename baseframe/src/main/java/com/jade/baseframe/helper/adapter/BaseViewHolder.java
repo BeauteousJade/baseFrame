@@ -13,7 +13,6 @@ import com.jade.baseframe.mvp.Presenter;
 import java.util.HashMap;
 import java.util.Map;
 
-
 final class BaseViewHolder extends RecyclerView.ViewHolder {
 
     public final Presenter mPresenter;

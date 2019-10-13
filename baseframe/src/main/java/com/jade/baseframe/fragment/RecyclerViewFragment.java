@@ -47,19 +47,19 @@ public abstract class RecyclerViewFragment extends BaseFragment {
 
     @SuppressWarnings("unchecked")
     @NonNull
-    public final RecyclerAdapterDelegate<?> getOriginDelegate() {
+    public final RecyclerAdapterDelegate getOriginDelegate() {
         return mHeaderAndFooterRecyclerViewAdapter.getOriginDelegate();
     }
 
     @SuppressWarnings("unchecked")
     @Nullable
-    public final RecyclerAdapterDelegate<?> getHeaderDelegate() {
+    public final RecyclerAdapterDelegate getHeaderDelegate() {
         return mHeaderAndFooterRecyclerViewAdapter.getHeaderDelegate();
     }
 
     @SuppressWarnings("unchecked")
     @Nullable
-    public final RecyclerAdapterDelegate<?> getFooterDelegate() {
+    public final RecyclerAdapterDelegate getFooterDelegate() {
         return mHeaderAndFooterRecyclerViewAdapter.getFooterDelegate();
     }
 
@@ -74,12 +74,12 @@ public abstract class RecyclerViewFragment extends BaseFragment {
     }
 
     @Nullable
-    protected RecyclerAdapterDelegate<?> onCreateHeaderDelegate() {
+    protected RecyclerAdapterDelegate onCreateHeaderDelegate() {
         return null;
     }
 
     @Nullable
-    protected RecyclerAdapterDelegate<?> onCreateFooterDelegate() {
+    protected RecyclerAdapterDelegate onCreateFooterDelegate() {
         return null;
     }
 
@@ -87,5 +87,5 @@ public abstract class RecyclerViewFragment extends BaseFragment {
     protected abstract RecyclerView.LayoutManager onCreateLayoutManager();
 
     @NonNull
-    protected abstract RecyclerAdapterDelegate<?> onCreateOriginDelegate();
+    protected abstract RecyclerAdapterDelegate onCreateOriginDelegate();
 }

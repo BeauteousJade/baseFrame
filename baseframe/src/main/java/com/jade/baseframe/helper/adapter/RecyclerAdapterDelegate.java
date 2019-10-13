@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 
 import com.jade.baseframe.mvp.Presenter;
 
-public interface RecyclerAdapterDelegate<T> {
+public interface RecyclerAdapterDelegate {
 
     /**
      * 返回该代理需要处理的数据的起始位置

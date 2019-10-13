@@ -25,7 +25,7 @@ public class Presenter implements Presence {
      * create生命周期的回调
      * 2种case:
      * 1. mState = INIT,执行顺序：init -> create。
-     * 2. {@link #mState}为其他状态，非法情况。
+     * 2. mState为其他状态，非法情况。
      *
      * @param presence
      */
@@ -113,7 +113,6 @@ public class Presenter implements Presence {
     }
 
     protected void onDestroy() {
-
     }
 
     private void traverseChildPresenter(PresenterAction presenterAction) {
