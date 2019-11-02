@@ -29,19 +29,19 @@ public class TestRecyclerViewFragment extends RecyclerViewFragment {
 
     @NonNull
     @Override
-    protected RecyclerAdapterDelegate<?> onCreateOriginDelegate() {
+    protected RecyclerAdapterDelegate onCreateOriginDelegate() {
         return new RecyclerOriginDelegate(this);
     }
 
     @Nullable
     @Override
-    protected RecyclerAdapterDelegate<?> onCreateFooterDelegate() {
+    protected RecyclerAdapterDelegate onCreateFooterDelegate() {
         return new RecyclerViewFooterDelegate(this);
     }
 
     @Nullable
     @Override
-    protected RecyclerAdapterDelegate<?> onCreateHeaderDelegate() {
+    protected RecyclerAdapterDelegate onCreateHeaderDelegate() {
         return new RecyclerHeaderDelegate();
     }
 
