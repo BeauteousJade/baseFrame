@@ -36,7 +36,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.3.0"
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
 
-    implementation "com.github.BeauteousJade.blade:inject:1.5.0"
-    annotationProcessor "com.github.BeauteousJade.blade:processor:1.5.0"
+    implementation "com.github.BeauteousJade.blade:inject:1.6.0-release01"
+    annotationProcessor "com.github.BeauteousJade.blade:processor:1.6.0-release01"
     implementation project(path: ':baseframe')
 }

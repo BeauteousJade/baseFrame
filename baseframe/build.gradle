@@ -35,6 +35,6 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.1.0-beta04"
     implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
 
-    implementation "com.github.BeauteousJade.blade:inject:1.5.0"
-    annotationProcessor "com.github.BeauteousJade.blade:processor:1.5.0"
+    implementation "com.github.BeauteousJade.blade:inject:1.6.0-release01"
+    annotationProcessor "com.github.BeauteousJade.blade:processor:1.6.0-release01"
 }
